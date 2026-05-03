@@ -26,6 +26,23 @@ echo "==> Installing packages..."
 echo "==> Installing AUR packages..."
 [ -f ~/.config/aur-pkglist.txt ] && paru -S --needed - < ~/.config/aur-pkglist.txt
 
+echo "==> Installing themes..."
+mkdir -p ~/Graphite ~/.local/share/icons ~/.themes
+
+# Graphite GTK theme
+if [ ! -d ~/Graphite/Graphite-gtk-theme ]; then
+  git clone https://github.com/vinceliuice/Graphite-gtk-theme.git ~/Graphite/Graphite-gtk-theme
+fi
+cd ~/Graphite/Graphite-gtk-theme && bash install.sh --dest ~/.themes
+
+# MacTahoe icon theme
+if [ ! -d ~/Graphite/MacTahoe-icon-theme ]; then
+  git clone https://github.com/vinceliuice/MacTahoe-icon-theme.git ~/Graphite/MacTahoe-icon-theme
+fi
+cd ~/Graphite/MacTahoe-icon-theme && bash install.sh --dest ~/.local/share/icons
+
+cd ~
+
 echo "==> Restoring dconf..."
 [ -f ~/.config/dconf-settings.ini ] && dconf load / < ~/.config/dconf-settings.ini
 
