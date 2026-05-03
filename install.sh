@@ -6,7 +6,7 @@ DOTFILES_DIR="$HOME/.dotfiles"
 
 echo "==> Cloning dotfiles..."
 if [ -d "$DOTFILES_DIR" ]; then
-  echo "    Dotfiles already cloned, skipping..."
+  echo "    Dotfiles already exist, skipping clone..."
 else
   git clone --bare "$DOTFILES_REPO" "$DOTFILES_DIR"
 fi
