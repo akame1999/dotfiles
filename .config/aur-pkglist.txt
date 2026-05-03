@@ -1,4 +1,4 @@
-aether 4.16.0-1
-aethertune-bin 0.8.0-1
-gtk-engine-murrine 0.98.2-5
-morewaita-icon-theme 49-1
+aether
+aethertune-bin
+gtk-engine-murrine
+morewaita-icon-theme
