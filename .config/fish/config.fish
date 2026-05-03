@@ -5,3 +5,4 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #function fish_greeting
 #    # smth smth
 #end
+alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
