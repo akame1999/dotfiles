@@ -5,7 +5,11 @@ DOTFILES_REPO="git@github.com:akame1999/dotfiles.git"
 DOTFILES_DIR="$HOME/.dotfiles"
 
 echo "==> Cloning dotfiles..."
-git clone --bare "$DOTFILES_REPO" "$DOTFILES_DIR"
+if [ -d "$DOTFILES_DIR" ]; then
+  echo "    Dotfiles already cloned, skipping..."
+else
+  git clone --bare "$DOTFILES_REPO" "$DOTFILES_DIR"
+fi
 
 function dot { git --git-dir="$DOTFILES_DIR/" --work-tree="$HOME" "$@"; }
 
