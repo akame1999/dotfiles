@@ -1,6 +1,4 @@
 accountsservice
-aether
-aethertune-bin
 alacritty
 alsa-firmware
 alsa-plugins
@@ -113,7 +111,6 @@ gst-plugin-pipewire
 gst-plugin-va
 gst-plugins-bad
 gst-plugins-ugly
-gtk-engine-murrine
 guake
 gvfs-afc
 gvfs-gphoto2
@@ -164,7 +161,6 @@ micro
 mission-center
 mkinitcpio
 modemmanager
-morewaita-icon-theme
 mousetweaks
 mpv
 mtools
